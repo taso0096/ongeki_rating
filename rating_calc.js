@@ -58,8 +58,6 @@ $.getScript('https://cdn.jsdelivr.net/gh/taso0096/ongeki_rating/constants.js')
   recentRate /= 10;
 
   $('.rating_field [class*=rating_]').text(Math.floor(playerRate*1000)/1000);
-  $('.rating_field .f_11').text('（MAX ' + Math.floor(playerRate*1000)/1000 + '）');
-
 
   $('.battle_rank_block').css('z-index', 1);
   $('.user_data_container').after(`
