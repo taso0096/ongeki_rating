@@ -1,5 +1,5 @@
 let constants = {};
-for (let i = 1; i <= $('.ui_article_entry table').length; i++) {
+for (let i = 0; i <= $('.ui_article_entry table').length; i++) {
   let musicsData = $('.ui_article_entry table').eq(i);
   for (let j = 1; j < musicsData.find('tr').length; j++) {
     let musicData = musicsData.find('tr').eq(j).children('td');
