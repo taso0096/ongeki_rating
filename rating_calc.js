@@ -48,7 +48,7 @@ $.getScript('https://cdn.jsdelivr.net/gh/taso0096/ongeki_rating/constants.js')
     } else if (i < 55) {
       recentRate += musicRate;
     }
-    $('.score_table').children().eq(i).append('<tr><td class="'+ $('.score_label:not(.music_rate)').eq(i).attr('class') +' music_rate">曲別レート</td><td class="' + $('.score_value:not(.music_rate)').eq(i).attr('class') + ' music_rate">' + musicRate.toFixed(2) + '</td></tr>');
+    $('.score_table').children().eq(i).append('<tr><td class="'+ $('.score_label:not(.music_rate)').eq(i).attr('class') +' music_rate">曲別レート</td><td class="' + $('.score_value:not(.music_rate)').eq(i).attr('class') + ' music_rate">' + Math.floor(musicRate*100)/100 + '</td></tr>');
   }
 
   let playerRate = (newRate + bestRate + recentRate)/55;
@@ -81,8 +81,7 @@ $.getScript('https://cdn.jsdelivr.net/gh/taso0096/ongeki_rating/constants.js')
   `);
   $('.border_block div').append(`
     <hr class="gray_line">
-    曲別レートはよくわからないので四捨五入、<br>
-    プレイヤーデータに表示しているレートは全て切り捨てです。<br>
+    表示しているレートは全て切り捨てです。<br>
     到達可能レートはベスト枠1位でリーセント枠を埋めた場合のレートです。<br>
     各曲のレベル部分は譜面定数に置き換わっていますが、データがない場合は<br>
     赤文字で推定レートが表示されます。(9は9.0、9+は9.7など)<br>
