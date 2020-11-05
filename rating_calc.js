@@ -94,7 +94,7 @@ $('.border_block div').append(`
   赤文字で推定レートが表示されます。(9は9.0、9+は9.7など)<br>
   おそらくAA以下のスコアには対応していません。<br>
   Gamerchの<a href="https://ongeki.gamerch.com/オンゲキ%20楽曲一覧（Lv順）高難易度" target="_blank" class="blue">オンゲキ攻略wiki</a>
-  の譜面定数(R2/07/30 時点)を使用しています。<br><br>
+  の譜面定数を使用しています。<br><br>
   開発者：たそ <a href="https://twitter.com/taso0096" target="_blank" class="blue">ツイッター</a>
 `);
 $('body').append('<div class="calc_rate_complete"></div>')
